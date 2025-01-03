@@ -1,8 +1,16 @@
 # Masonic - Modern Construction Company Website Template
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/masonic)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://masonic-site.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A beautiful, responsive website template for construction and masonry companies built with React, TypeScript, and Tailwind CSS.
 
 ![Masonic Preview](preview.png)
+
+## 🌟 Live Demo
+
+Check out the live demo: [https://masonic-site.vercel.app/](https://masonic-site.vercel.app/)
 
 ## 🌟 Features
 
