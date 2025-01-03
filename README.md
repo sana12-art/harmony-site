@@ -1,6 +1,6 @@
 # Masonic - Modern Construction Company Website Template
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/masonic)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ardakaano/masonic)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://masonic-site.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -43,7 +43,7 @@ Check out the live demo: [https://masonic-site.vercel.app/](https://masonic-site
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/masonic.git
+git clone https://github.com/ardakaano/masonic.git
 ```
 
 2. Navigate to the project directory:
@@ -110,9 +110,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-Arda Kaan Özcan - [@ardakaanozcan](https://twitter.com/ardakaanozcan)
+Arda Kaan Özcan
+- Twitter: [@ardakaanozcan_](https://twitter.com/ardakaanozcan_)
+- Email: [hey@ardakaanozcan.com](mailto:hey@ardakaanozcan.com)
 
-Project Link: [https://github.com/yourusername/masonic](https://github.com/yourusername/masonic)
+Project Link: [https://github.com/ardakaano/masonic](https://github.com/ardakaano/masonic)
 
 ## 🙏 Acknowledgments
 
