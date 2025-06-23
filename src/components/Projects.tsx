@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     title: 'Nettoyage après chantier',
     category: 'Nettoyage',
-    image: '/public/nettoyage.jpg',
+    image: '/nettoyage.jpg',
     description: 'Service de nettoyage professionnel complet après travaux : enlèvement des gravats, dépoussiérage, lavage des surfaces.',
     fullDescription: 'Harmony Bâtiment propose un service de nettoyage après travaux complet et professionnel, destiné aux particuliers, entreprises et chantiers de construction. Nous intervenons à la fin de chaque projet pour assurer un environnement propre, sain et prêt à l’usage.',
     features: [
@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     title: 'Restauration d’un bâtiment historique',
     category: 'Restauration',
-    image: '/public/historique.jpg',
+    image: '/historique.jpg',
     description: 'Travaux de rénovation minutieux d’un édifice du XIXe siècle, avec respect du patrimoine architectural.',
     fullDescription: 'Ce projet de restauration méticuleux a redonné vie à un bâtiment emblématique du XIXe siècle tout en préservant son cachet architectural d’origine. Notre équipe a allié le savoir-faire traditionnel aux techniques modernes de préservation pour transmettre ce patrimoine aux générations futures.',
     features: [
@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     title: ' Résidence de standing',
     category: 'Résidentiel',
-    image: '/public/residentiel.jpg',
+    image: '/residentiel.jpg',
     description: 'Développement d’un complexe résidentiel haut de gamme alliant confort, esthétisme et qualité de construction.',
     fullDescription: 'Ce complexe résidentiel haut de gamme redéfinit les standards du confort et de l’élégance. Chaque logement a été conçu avec soin pour offrir un cadre de vie luxueux, moderne et fonctionnel, tout en bénéficiant d’espaces communs dignes d’un hôtel de prestige.',
     features: [
@@ -82,7 +82,7 @@ const projects: Project[] = [
   {
     title: 'Immeuble de bureaux moderne',
     category: 'Commercial',
-    image: '/public/immeuble.jpg',
+    image: '/immeuble.jpg',
     description: 'Construction d’un immeuble de bureaux utilisant des matériaux durables et un design contemporain',
     fullDescription: 'Cet immeuble de bureaux de dernière génération redéfinit les standards des espaces de travail professionnels. Conçu pour favoriser la productivité, le bien-être et l’innovation, il intègre des solutions durables et des services haut de gamme pour les entreprises modernes.',
     features: [

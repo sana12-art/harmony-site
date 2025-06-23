@@ -34,7 +34,7 @@ Anim√©e par des valeurs familiales solides et un profond engagement, notre soci√
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-900">
                 <img
-                  src="/public/propos.png"
+                  src="/propos.png"
                   alt="Construction site with workers"
                   className="h-full w-full object-cover opacity-90"
                 />
