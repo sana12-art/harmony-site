@@ -5,16 +5,18 @@ export default function Contact() {
     <div id="contact" className="relative isolate bg-white py-24 sm:py-32">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contactez-nous</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Get in touch with us to discuss your next project or learn more about our services.
+            Discutons ensemble de votre futur projet ou obtenez plus d’informations sur nos services.
+Notre équipe se tient à votre disposition pour vous conseiller et vous accompagner.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <div>
-            <h3 className="text-2xl font-bold tracking-tight text-gray-900">Get in Touch</h3>
+            <h3 className="text-2xl font-bold tracking-tight text-gray-900">Restons en contact</h3>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              We're here to help with any questions you may have about our services. Reach out to us through any of the following channels:
+              Nous sommes là pour répondre à toutes vos questions concernant nos services.
+N’hésitez pas à nous contacter par l’un des moyens suivants :
             </p>
             <dl className="mt-8 space-y-6">
               <div className="flex gap-x-4">
@@ -22,7 +24,7 @@ export default function Contact() {
                   <PhoneIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <p className="text-base leading-7 text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-base leading-7 text-gray-600">01 82 28 11 66</p>
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -31,7 +33,7 @@ export default function Contact() {
                 </dt>
                 <dd>
                   <a href="mailto:contact@masonic.com" className="text-base leading-7 text-gray-600 hover:text-primary">
-                    contact@masonic.com
+                    contact@harmonybatiment.com
                   </a>
                 </dd>
               </div>
@@ -41,9 +43,8 @@ export default function Contact() {
                 </dt>
                 <dd>
                   <p className="text-base leading-7 text-gray-600">
-                    123 Construction Ave<br />
-                    Building Suite 500<br />
-                    San Francisco, CA 94105
+                    1 Rue Julius et Ethel Rosenberg,<br/>
+                    95870 Bezons, FRANCE
                   </p>
                 </dd>
               </div>
@@ -52,7 +53,7 @@ export default function Contact() {
           <form className="flex flex-col gap-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
-                Name
+                Nom
               </label>
               <div className="mt-2.5">
                 <input
@@ -93,9 +94,9 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="btn btn-primary w-full sm:w-auto"
+              className="block text-center bg-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
             >
-              Send Message
+              Envoyer
             </button>
           </form>
         </div>

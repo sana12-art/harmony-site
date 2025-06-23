@@ -2,18 +2,18 @@ import { ShieldCheckIcon, TrophyIcon, UserGroupIcon } from '@heroicons/react/24/
 
 const values = [
   {
-    name: 'Excellence in Craftsmanship',
-    description: 'We maintain the highest standards in masonry and construction, combining traditional techniques with modern innovation.',
+    name: 'Excellence du savoir-faire',
+    description: 'Nous nous engageons à fournir un travail de qualité, alliant techniques traditionnelles et innovations modernes dans tous nos projets de construction et de rénovation.',
     icon: TrophyIcon,
   },
   {
-    name: 'Integrity & Trust',
-    description: 'Our work is built on a foundation of honesty, transparency, and commitment to delivering what we promise.',
+    name: 'Intégrité et confiance',
+    description: 'Nos réalisations reposent sur la transparence, l’honnêteté et le respect de nos engagements envers nos clients.',
     icon: ShieldCheckIcon,
   },
   {
-    name: 'Client Partnership',
-    description: 'We believe in building lasting relationships with our clients through collaboration and exceptional service.',
+    name: 'Partenariat avec nos clients',
+    description: 'Nous privilégions une relation durable avec chaque client, fondée sur l’écoute, la collaboration et un service de qualité.',
     icon: UserGroupIcon,
   },
 ]
@@ -25,18 +25,16 @@ export default function About() {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Masonic</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">À propos de nous</h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Since our establishment, we have been at the forefront of masonry and construction excellence. Our journey began with a simple mission: to create structures that stand the test of time while honoring the rich traditions of masonic craftsmanship.
-              </p>
+Harmony Bâtiment est une entreprise familiale spécialisée dans les travaux de finition, avec un savoir-faire particulier en technicoat, ragréage, ponçage et maçonnerie. Nous intervenons également sur les autres travaux d’achèvement et de finition des bâtiments, comme les revêtements de sols et murs, ainsi que le nettoyage.              </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Today, we're proud to be one of the leading construction companies, known for our meticulous attention to detail and unwavering commitment to quality. Our team combines decades of experience with innovative approaches to meet modern building challenges.
-              </p>
+Animée par des valeurs familiales solides et un profond engagement, notre société met un point d’honneur à garantir la qualité de ses réalisations tout en respectant scrupuleusement les délais convenus.              </p>
             </div>
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-900">
                 <img
-                  src="https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/public/propos.png"
                   alt="Construction site with workers"
                   className="h-full w-full object-cover opacity-90"
                 />
@@ -45,7 +43,7 @@ export default function About() {
           </div>
           
           <div className="mt-24">
-            <h3 className="text-2xl font-bold tracking-tight text-gray-900">Our Values</h3>
+            <h3 className="text-2xl font-bold tracking-tight text-gray-900">Nos Valeurs</h3>
             <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {values.map((value) => (
                 <div key={value.name} className="relative bg-white p-6 shadow-sm rounded-2xl">

@@ -15,91 +15,90 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: 'Modern Office Complex',
-    category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'A state-of-the-art office building featuring sustainable materials and innovative design.',
-    fullDescription: 'This modern office complex represents the pinnacle of contemporary commercial architecture. The project seamlessly integrates sustainable building practices with cutting-edge design elements to create a workspace that promotes productivity and well-being.',
+    title: 'Nettoyage après chantier',
+    category: 'Nettoyage',
+    image: '/public/nettoyage.jpg',
+    description: 'Service de nettoyage professionnel complet après travaux : enlèvement des gravats, dépoussiérage, lavage des surfaces.',
+    fullDescription: 'Harmony Bâtiment propose un service de nettoyage après travaux complet et professionnel, destiné aux particuliers, entreprises et chantiers de construction. Nous intervenons à la fin de chaque projet pour assurer un environnement propre, sain et prêt à l’usage.',
     features: [
-      'LEED Platinum certified building',
-      'Smart building management system',
-      'Floor-to-ceiling windows for natural light',
-      'Rooftop garden and recreational space',
-      'Electric vehicle charging stations',
+      'Évacuation des gravats et déchets',
+      'Nettoyage en profondeur des sols, murs, vitres',
+      'Dépoussiérage des surfaces et équipements',
+      'Utilisation de produits professionnels écologiques',
+      'Équipe formée aux normes de sécurité',
     ],
     specifications: {
-      'Total Area': '250,000 sq ft',
-      'Floors': '15 stories',
-      'Completion': '2023',
-      'Location': 'San Francisco, CA',
-      'Parking': '200 underground spaces',
-      'Energy Rating': 'A+',
+      'Surface moyenne traitée :': 'jusqu’à 5 000 m²',
+      'Temps d’intervention': '1 à 3 jours selon le chantier',
+      'Zone d’intervention': 'Île-de-France et alentours',
+      'Fréquence': ' Intervention ponctuelle ou régulière',
+      'Certification': 'Équipe qualifiée, assurance professionnelle incluse',
     },
   },
   {
-    title: 'Historic Building Restoration',
-    category: 'Restoration',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'Careful restoration of a 19th-century landmark, preserving its historical significance.',
-    fullDescription: 'This meticulous restoration project breathed new life into a historic 19th-century landmark while preserving its architectural heritage. Our team combined traditional craftsmanship with modern preservation techniques to ensure the building\'s legacy continues for future generations.',
+    title: 'Restauration d’un bâtiment historique',
+    category: 'Restauration',
+    image: '/public/historique.jpg',
+    description: 'Travaux de rénovation minutieux d’un édifice du XIXe siècle, avec respect du patrimoine architectural.',
+    fullDescription: 'Ce projet de restauration méticuleux a redonné vie à un bâtiment emblématique du XIXe siècle tout en préservant son cachet architectural d’origine. Notre équipe a allié le savoir-faire traditionnel aux techniques modernes de préservation pour transmettre ce patrimoine aux générations futures.',
     features: [
-      'Original facade restoration',
-      'Modern safety upgrades',
-      'Period-accurate materials',
-      'Seismic retrofitting',
-      'Historical detail preservation',
+      'Restauration complète de la façade d’origine',
+      'Mise aux normes de sécurité actuelles',
+      'Matériaux fidèles à l’époque',
+      'Renforcement structurel antisismique',
+      'Valorisation des détails architecturaux historiques',
     ],
     specifications: {
-      'Building Age': '150+ years',
-      'Restoration Period': '18 months',
-      'Historical Status': 'National Historic Landmark',
-      'Original Use': 'Bank Building',
-      'Current Use': 'Mixed-use Commercial',
-      'Area': '45,000 sq ft',
+      'Âge du bâtiment': 'plus de 150 ans',
+      'Durée des travaux': ' 18 mois',
+      'Statut patrimonial': 'Monument historique classé',
+      'Usage initial ': 'Ancienne banque',
+      'Usage actuel': ' Immeuble commercial à usage mixte',
+      'Surface totale': '4 200 m²',
     },
   },
   {
-    title: 'Luxury Residential Complex',
-    category: 'Residential',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'High-end residential development combining comfort with architectural excellence.',
-    fullDescription: 'This luxury residential complex sets new standards in upscale living. Each residence is thoughtfully designed to provide the ultimate in comfort and sophistication, while the building\'s amenities create a resort-like atmosphere for residents.',
+    title: ' Résidence de standing',
+    category: 'Résidentiel',
+    image: '/public/residentiel.jpg',
+    description: 'Développement d’un complexe résidentiel haut de gamme alliant confort, esthétisme et qualité de construction.',
+    fullDescription: 'Ce complexe résidentiel haut de gamme redéfinit les standards du confort et de l’élégance. Chaque logement a été conçu avec soin pour offrir un cadre de vie luxueux, moderne et fonctionnel, tout en bénéficiant d’espaces communs dignes d’un hôtel de prestige.',
     features: [
-      'Custom interior finishes',
-      'Private balconies',
-      'Smart home integration',
+      'Finitions intérieures personnalisées',
+      'Balcons privés avec vue panoramique',
+      'Service de conciergerie',
       'Concierge service',
-      'Spa and fitness center',
+      'Espace bien-être avec spa et salle de sport',
     ],
     specifications: {
-      'Units': '120 residences',
-      'Floors': '25 stories',
-      'Unit Sizes': '1,000-4,500 sq ft',
-      'Completion': '2024',
-      'Amenities': '25,000 sq ft',
-      'Location': 'Downtown District',
+      'Nombre de logements ': '120 ',
+      'Étages': '25',
+      'Surface des logements': 'de 100 à 420 m²',
+      'Livraison prévue ': '2024',
+      'Espaces communs': '2 300 m² d’équipements haut de gamme',
+      'Localisation': 'Quartier centre-ville',
     },
   },
   {
-    title: 'Shopping Center Development',
+    title: 'Immeuble de bureaux moderne',
     category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1555636222-cae831e670b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'Modern retail space designed for optimal customer experience and business efficiency.',
-    fullDescription: 'This contemporary shopping center redefines the retail experience with its innovative design and customer-centric layout. The development incorporates sustainable practices and creates a vibrant community hub for shopping, dining, and entertainment.',
+    image: '/public/immeuble.jpg',
+    description: 'Construction d’un immeuble de bureaux utilisant des matériaux durables et un design contemporain',
+    fullDescription: 'Cet immeuble de bureaux de dernière génération redéfinit les standards des espaces de travail professionnels. Conçu pour favoriser la productivité, le bien-être et l’innovation, il intègre des solutions durables et des services haut de gamme pour les entreprises modernes.',
     features: [
-      'Mixed retail spaces',
-      'Food court and restaurants',
-      'Underground parking',
-      'Digital wayfinding system',
-      'Outdoor shopping promenade',
+      'Espaces modulables pour bureaux',
+      'Salle de conférence et zones de coworking',
+      'Parking souterrain sécurisé',
+      'Gestion intelligente du bâtiment (domotique)',
+      'Espaces verts et terrasses accessibles',
     ],
     specifications: {
-      'Retail Space': '500,000 sq ft',
-      'Parking': '1,500 spaces',
-      'Stores': '100+ retail units',
-      'Restaurants': '15 dining options',
-      'Opening': '2024',
-      'Location': 'Suburban Center',
+      'Surface totale': '46 000 m²',
+      'Capacité de stationnement': '1 500 places',
+      'Bureaux': '100+ espaces professionnels',
+      'Services sur site ': '15 restaurants & cafétérias',
+      'Livraison': '2024',
+      'Localisation ': 'Quartier d’affaires en périphérie',
     },
   },
 ]
@@ -111,9 +110,9 @@ export default function Projects() {
     <div id="projects" className="bg-white py-24 sm:py-32">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos projets</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Explore our portfolio of completed projects, showcasing our expertise in various construction domains.
+            Découvrez notre portfolio de réalisations, illustrant notre savoir-faire dans différents domaines de la construction et de la rénovation.
           </p>
         </div>
         
@@ -151,7 +150,7 @@ export default function Projects() {
                     }}
                     className="text-sm font-semibold leading-6 text-primary hover:text-primary-light"
                   >
-                    Learn more <span aria-hidden="true">→</span>
+                    En savoir plus <span aria-hidden="true">→</span>
                   </button>
                 </div>
               </div>

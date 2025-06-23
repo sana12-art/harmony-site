@@ -3,11 +3,11 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'About', href: '#about' },
+  { name: 'Accueil', href: '#' },
+  { name: 'À propos', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Réalisations', href: '#projects' },
+  { name: 'Avis clients', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -18,9 +18,10 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-white shadow">
       <nav className="container flex items-center justify-between py-6" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-primary">Masonic</span>
-          </a>
+      <a href="#" className="-m-1.5 p-1.5">
+            <img src="/HARMONY-BATIMENT-logo.webp" alt="Harmony Bâtiment" className="h-16" />
+      </a>
+
         </div>
         <div className="flex lg:hidden">
           <button
@@ -44,18 +45,24 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#contact" className="btn btn-primary">
-            Get Started
-          </a>
+        <a
+  href="#contact"
+  className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-300"
+>
+  Demander un devis
+</a>
+
+
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold text-primary">Masonic</span>
-            </a>
+          <a href="#" className="-m-1.5 p-1.5">
+  <img src="/HARMONY-BATIMENT-logo.webp" alt="Harmony Bâtiment" className="h-12 w-auto" />
+</a>
+
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -82,12 +89,13 @@ export default function Navbar() {
               <div className="py-6">
                 <a
                   href="#contact"
-                  className="btn btn-primary block text-center"
+                  className="block text-center bg-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Demander un devis
                 </a>
               </div>
+
             </div>
           </div>
         </Dialog.Panel>

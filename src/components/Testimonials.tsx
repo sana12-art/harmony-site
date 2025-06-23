@@ -1,21 +1,21 @@
 const testimonials = [
   {
-    content: "Masonic's attention to detail and commitment to quality is unmatched. They transformed our vision into reality while maintaining the highest standards of craftsmanship.",
-    author: "Sarah Johnson",
-    role: "Property Developer",
-    company: "Urban Living Spaces",
+    content: "Harmony Bâtiment est un partenaire de confiance. Leur professionnalisme et la qualité d’exécution sont toujours au rendez-vous, même sur des projets exigeants.",
+    author: "Group Povataj (Cobat Constructions)",
+    role: "",
+    company: "",
   },
   {
-    content: "Working with Masonic was a seamless experience. Their team's expertise in historic restoration helped us preserve our building's character while modernizing its functionality.",
-    author: "Michael Chen",
-    role: "Facilities Director",
-    company: "Heritage Foundation",
+    content: "Nous faisons régulièrement appel à Harmony Bâtiment pour des travaux de finition et de nettoyage après chantier. Leur sérieux, leur ponctualité et leur réactivité font toute la différence",
+    author: "Nexity Urbaine",
+    role: "",
+    company: "",
   },
   {
-    content: "The level of professionalism and technical expertise demonstrated by Masonic was exceptional. They delivered our project on time and within budget.",
-    author: "David Martinez",
-    role: "Project Manager",
-    company: "Commercial Ventures Inc.",
+    content: "Harmony Bâtiment nous accompagne sur plusieurs projets de construction et de rénovation. Leur capacité à respecter les délais et leur rigueur sur le terrain sont très appréciées.",
+    author: "BJF Construction",
+    role: "",
+    company: "",
   },
 ]
 
@@ -25,10 +25,10 @@ export default function Testimonials() {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What Our Clients Say
+            Ce que disent nos clients
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Don't just take our word for it - hear from some of our satisfied clients about their experience working with Masonic.
+            Ne vous fiez pas seulement à nos mots – découvrez ce que pensent nos clients de leur expérience avec Harmony Bâtiment.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -42,7 +42,7 @@ export default function Testimonials() {
                   <div className="min-w-0">
                     <p className="text-lg font-semibold leading-6 text-gray-900">{testimonial.author}</p>
                     <p className="mt-1 text-sm leading-5 text-gray-500">
-                      {testimonial.role} at {testimonial.company}
+                      {testimonial.role}  {testimonial.company}
                     </p>
                   </div>
                 </div>
