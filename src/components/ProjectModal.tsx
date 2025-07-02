@@ -113,7 +113,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                           onClick={onClose}
                           className="btn btn-primary"
                         >
-                          Contact Us About This Project
+                          Contactez-nous à propos de ce projet 
                         </a>
                       </div>
                     </div>
