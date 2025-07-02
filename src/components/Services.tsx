@@ -51,11 +51,12 @@ export default function Services() {
     new Array(services.length).fill(false)
   )
 
-  const toggleDetails = (index) => {
-    const newShowDetails = [...showDetails]
-    newShowDetails[index] = !newShowDetails[index]
-    setShowDetails(newShowDetails)
-  }
+const toggleDetails = (index: number) => {
+  const newShowDetails = [...showDetails]
+  newShowDetails[index] = !newShowDetails[index]
+  setShowDetails(newShowDetails)
+}
+
 
   return (
     <div id="services" className="py-24 sm:py-32">
