@@ -1,28 +1,53 @@
+import { useRef } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+
 const testimonials = [
   {
-    content: "Harmony Bâtiment est un partenaire de confiance. Leur professionnalisme et la qualité d’exécution sont toujours au rendez-vous, même sur des projets exigeants.",
-    author: "Group Povataj (Cobat Constructions)",
-    role: "",
-    company: "",
+    content:
+      "Harmony Bâtiment est un partenaire de confiance. Leur professionnalisme et la qualité d’exécution sont toujours au rendez-vous.",
+    author: "Group Povataj",
+    logo: "G",
   },
   {
-    content: "Nous faisons régulièrement appel à Harmony Bâtiment pour des travaux de finition et de nettoyage après chantier. Leur sérieux, leur ponctualité et leur réactivité font toute la différence",
+    content:
+      "Nous faisons régulièrement appel à Harmony Bâtiment pour des travaux de finition et de nettoyage après chantier.",
     author: "Nexity Urbaine",
-    role: "",
-    company: "",
+    logo: "N",
   },
   {
-    content: "Harmony Bâtiment nous accompagne sur plusieurs projets de construction et de rénovation. Leur capacité à respecter les délais et leur rigueur sur le terrain sont très appréciées.",
+    content:
+      "Leur capacité à respecter les délais et leur rigueur sur le terrain sont très appréciées.",
     author: "BJF Construction",
-    role: "",
-    company: "",
+    logo: "B",
   },
-]
+  {
+    content:
+      "Collaboration fluide et professionnelle. Un excellent partenaire pour nos chantiers.",
+    author: "LTE",
+    logo: "L",
+  },
+  {
+    content:
+      "Une équipe fiable et réactive. Harmony Bâtiment a su répondre à nos besoins avec efficacité.",
+    author: "FWPT VINCI",
+    logo: "F",
+  },
+];
 
 export default function Testimonials() {
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+  };
+
   return (
-    <div id="testimonials" className="bg-gray-50 py-24 sm:py-32">
-      <div className="container">
+    <div id="testimonials" className="bg-gray-50 py-24 sm:py-32 relative">
+      <div className="container mx-auto px-4">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Ils nous font confiance
@@ -32,46 +57,48 @@ export default function Testimonials() {
             Voici ce qu’ils disent de notre collaboration.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
+
+        {/* Flèches gauche/droite */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full border hover:bg-gray-100"
+        >
+          <ChevronLeftIcon className="h-6 w-6 text-gray-600" />
+        </button>
+        <button
+          onClick={scrollRight}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full border hover:bg-gray-100"
+        >
+          <ChevronRightIcon className="h-6 w-6 text-gray-600" />
+        </button>
+
+        {/* Témoignages scrollables */}
+        <div
+          ref={scrollRef}
+          className="mt-16 flex gap-8 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}
+        >
+          {testimonials.map((testimonial, index) => (
             <div
-              key={testimonial.author}
-              className="flex flex-col justify-between bg-white p-6 shadow-sm rounded-2xl"
+              key={index}
+              className="min-w-[300px] max-w-[350px] flex-shrink-0 bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between"
             >
-              <div>
-                <div className="flex gap-x-3">
-                  <div className="min-w-0">
-                    <p className="text-lg font-semibold leading-6 text-gray-900">{testimonial.author}</p>
-                    <p className="mt-1 text-sm leading-5 text-gray-500">
-                      {testimonial.role} {testimonial.company}
-                    </p>
-                  </div>
-                </div>
-                <blockquote className="mt-6 text-base italic leading-7 text-gray-700">
-                  "{testimonial.content}"
-                </blockquote>
-              </div>
-              <div className="mt-8 flex">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="h-5 w-5 text-yellow-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ))}
+              <blockquote className="italic text-gray-700 text-base">
+                “{testimonial.content}”
+              </blockquote>
+              <div className="mt-6 flex items-center gap-x-4">
+               <div className="flex h-12 w-12 items-center justify-center rounded-full text-white font-bold text-lg" style={{ backgroundColor: '#009FE3' }}>
+  {testimonial.logo}
+</div>
+
+                <p className="text-base font-semibold text-gray-900">
+                  {testimonial.author}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
