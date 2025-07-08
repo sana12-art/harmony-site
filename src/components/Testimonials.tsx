@@ -25,10 +25,11 @@ export default function Testimonials() {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Ce que disent nos clients
+            Ils nous font confiance
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Ne vous fiez pas seulement à nos mots – découvrez ce que pensent nos clients de leur expérience avec Harmony Bâtiment.
+            Plusieurs acteurs majeurs du secteur nous confient régulièrement leurs chantiers.
+            Voici ce qu’ils disent de notre collaboration.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -42,7 +43,7 @@ export default function Testimonials() {
                   <div className="min-w-0">
                     <p className="text-lg font-semibold leading-6 text-gray-900">{testimonial.author}</p>
                     <p className="mt-1 text-sm leading-5 text-gray-500">
-                      {testimonial.role}  {testimonial.company}
+                      {testimonial.role} {testimonial.company}
                     </p>
                   </div>
                 </div>
@@ -73,4 +74,4 @@ export default function Testimonials() {
       </div>
     </div>
   )
-} 
+}

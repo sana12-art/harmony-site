@@ -46,17 +46,15 @@ const services = [
 ]
 
 export default function Services() {
-  // Tableau d'états pour afficher/masquer détails par service
   const [showDetails, setShowDetails] = useState(
     new Array(services.length).fill(false)
   )
 
-const toggleDetails = (index: number) => {
-  const newShowDetails = [...showDetails]
-  newShowDetails[index] = !newShowDetails[index]
-  setShowDetails(newShowDetails)
-}
-
+  const toggleDetails = (index: number) => {
+    const newShowDetails = [...showDetails]
+    newShowDetails[index] = !newShowDetails[index]
+    setShowDetails(newShowDetails)
+  }
 
   return (
     <div id="services" className="py-24 sm:py-32">
@@ -71,9 +69,9 @@ const toggleDetails = (index: number) => {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4 items-stretch">
             {services.map((service, index) => (
-              <div key={service.name} className="flex flex-col">
+              <div key={service.name} className="flex flex-col h-full">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                   <service.icon
                     className="h-5 w-5 flex-none text-primary"
@@ -81,8 +79,28 @@ const toggleDetails = (index: number) => {
                   />
                   {service.name}
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">{service.description}</p>
+                <dd className="mt-4 flex flex-col justify-between flex-1 h-full text-base leading-7 text-gray-600">
+                  <div className="flex-auto">
+                    <p>{service.description}</p>
+                    {showDetails[index] && (
+                      <div
+                        id={`service-details-${index}`}
+                        className="mt-4 space-y-4"
+                      >
+                        <div className="flex flex-wrap gap-4">
+                          {service.images.map((src, imgIndex) => (
+                            <img
+                              key={imgIndex}
+                              src={src}
+                              alt={`${service.name} chantier ${imgIndex + 1}`}
+                              className="w-40 rounded-md object-cover"
+                            />
+                          ))}
+                        </div>
+                        <p className="mt-2 text-gray-700">{service.details}</p>
+                      </div>
+                    )}
+                  </div>
                   <p className="mt-6">
                     <button
                       onClick={() => toggleDetails(index)}
@@ -94,25 +112,6 @@ const toggleDetails = (index: number) => {
                       <span aria-hidden="true">→</span>
                     </button>
                   </p>
-
-                  {showDetails[index] && (
-                    <div
-                      id={`service-details-${index}`}
-                      className="mt-4 space-y-4"
-                    >
-                      <div className="flex flex-wrap gap-4">
-                        {service.images.map((src, imgIndex) => (
-                          <img
-                            key={imgIndex}
-                            src={src}
-                            alt={`${service.name} chantier ${imgIndex + 1}`}
-                            className="w-40 rounded-md object-cover"
-                          />
-                        ))}
-                      </div>
-                      <p className="mt-2 text-gray-700">{service.details}</p>
-                    </div>
-                  )}
                 </dd>
               </div>
             ))}

@@ -84,7 +84,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                       
                       {project.features && (
                         <div className="mt-6">
-                          <h4 className="text-lg font-semibold text-gray-900">Points forts</h4>
+                          <h4 className="text-lg font-semibold text-gray-900">Nos réalisations</h4>
                           <ul className="mt-4 list-disc pl-5 space-y-2">
                             {project.features.map((feature, index) => (
                               <li key={index} className="text-gray-600">{feature}</li>
