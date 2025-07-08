@@ -93,7 +93,8 @@ const scrollRight = () => {
                 “{testimonial.content}”
               </blockquote>
               <div className="mt-6 flex items-center gap-x-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-white font-bold text-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-500
+ text-white font-bold text-lg">
                   {testimonial.logo}
                 </div>
                 <p className="text-base font-semibold text-gray-900">

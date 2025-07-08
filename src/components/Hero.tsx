@@ -22,7 +22,7 @@ export default function Hero() {
             Rénover en toute confiance, bâtir avec excellence.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#services" className="bg-blue-500 text-white px-4 py-2 rounded">
+            <a href="#services" className="bg-sky-500 text-white px-4 py-2 rounded">
               Nos Services
             </a>
           </div>

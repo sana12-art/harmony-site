@@ -55,7 +55,7 @@ const navigation = {
 const contactInfo = [
   { text: '01 82 28 11 66', icon: PhoneIcon, href: 'tel:01 82 28 11 66' },
   { text: 'contact@harmonybatiment.com', icon: EnvelopeIcon, href: 'mailto:contact@harmonybatiment.com' },
-  { text: '1 Rue Julius et Ethel Rosenberg, 95870 Bezons, FRANCE', icon: MapPinIcon, href: 'https://maps.google.com' },
+  { text: '62 RUE ANTONIN GEORGES BELIN, 95100 ARGENTEUIL ', icon: MapPinIcon, href: 'https://maps.google.com' },
 ]
 
 export default function Footer() {

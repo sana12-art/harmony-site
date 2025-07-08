@@ -43,8 +43,10 @@ N’hésitez pas à nous contacter par l’un des moyens suivants :
                 </dt>
                 <dd>
                   <p className="text-base leading-7 text-gray-600">
-                    1 Rue Julius et Ethel Rosenberg,<br/>
-                    95870 Bezons, FRANCE
+                    62 RUE ANTONIN GEORGES BELIN, <br/>
+                    95100 ARGENTEUIL
+
+                   
                   </p>
                 </dd>
               </div>
@@ -94,7 +96,7 @@ N’hésitez pas à nous contacter par l’un des moyens suivants :
             </div>
             <button
               type="submit"
-              className="block text-center bg-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
+              className="block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
             >
               Envoyer
             </button>
