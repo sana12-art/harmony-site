@@ -37,13 +37,19 @@ const testimonials = [
 export default function Testimonials() {
   const scrollRef = useRef(null);
 
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
-  };
+const scrollLeft = () => {
+  if (scrollRef.current) {
+    (scrollRef.current as HTMLElement).scrollBy({ left: -350, behavior: "smooth" });
+  }
+};
 
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
-  };
+const scrollRight = () => {
+  if (scrollRef.current) {
+    (scrollRef.current as HTMLElement).scrollBy({ left: 350, behavior: "smooth" });
+  }
+};
+
+
 
   return (
     <div id="testimonials" className="bg-gray-50 py-24 sm:py-32 relative">
@@ -87,10 +93,9 @@ export default function Testimonials() {
                 “{testimonial.content}”
               </blockquote>
               <div className="mt-6 flex items-center gap-x-4">
-               <div className="flex h-12 w-12 items-center justify-center rounded-full text-white font-bold text-lg" style={{ backgroundColor: '#009FE3' }}>
-  {testimonial.logo}
-</div>
-
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-white font-bold text-lg">
+                  {testimonial.logo}
+                </div>
                 <p className="text-base font-semibold text-gray-900">
                   {testimonial.author}
                 </p>
