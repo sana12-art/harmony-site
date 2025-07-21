@@ -1,6 +1,8 @@
+
 export default function Hero() {
+
   return (
-    <div className="relative isolate pt-14 min-h-screen">
+    <div className="relative isolate pt-14 min-h-screen bg-white">
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
         <div
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] 
@@ -13,22 +15,50 @@ export default function Hero() {
         />
       </div>
 
-      <div className="py-24 sm:py-32 lg:pb-40 flex flex-col justify-center min-h-screen">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Redécouvrez l’art de la construction avec Harmony Bâtiment
+      {/* Contenu principal en deux colonnes */}
+      <div className="container mx-auto px-6 py-20 flex flex-col lg:flex-row items-center justify-between min-h-[80vh]">
+        {/* Colonne gauche */}
+        <div className="lg:w-1/2 text-left">
+          <h1 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Redécouvrez l’art de la construction avec <span className="text-sky-600">Harmony Bâtiment</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Rénover en toute confiance, bâtir avec excellence.
+          <p className="text-lg text-gray-600 mb-8">
+            Rénover en toute confiance, bâtir avec excellence.<br/>Faites votre demande de devis gratuitement.
+
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#services" className="bg-sky-500 text-white px-4 py-2 rounded">
-              Nos Services
-            </a>
-          </div>
+         
+
+<div className="relative w-full sm:w-96">
+  <select className="w-full px-6 py-3 pr-32 border border-gray-300 rounded-full text-gray-700 appearance-none">
+    <option value="">--Choisir votre projet--</option>
+    <option value="">Préstations de nettoyage</option>
+    <option value="renovation">Préstations maçonnerie</option>
+    <option value="construction">Préstations technicoat</option>
+    <option value="nettoyage">Préstations revetement sol et mur</option>
+    <option value="nettoyage">Préstations plomberie & clime</option>
+
+  </select>
+  <button
+    className="absolute right-1 top-1 bottom-1 px-5 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition"
+  >
+    Chercher
+  </button>
+</div>
+
+
         </div>
+
+        {/* Colonne droite : image illustrative */}
+<div className="mt-10 lg:mt-19 lg:w-1/2 flex justify-center">
+       <img
+          src="/Image1.png"
+          alt="Travaux Harmony Bâtiment"
+          className="max-w-full h-auto ml-12  rounded-xl shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 animate-fade-in"
+        />
+      </div>
       </div>
 
+      {/* Arrière-plan bas */}
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
         <div
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] 

@@ -26,3 +26,6 @@
     @apply bg-primary text-white hover:bg-primary-light;
   }
 }
+.react-tel-input .flag-dropdown {
+  display: block !important;
+}
