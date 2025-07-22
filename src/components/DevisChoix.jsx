@@ -1,13 +1,19 @@
-import React from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import servicesParProjet from "../data/servicesParProjet";
+
+/**
+ * @typedef {Object} Service
+ * @property {string} id
+ * @property {string} nom
+ */
 
 const DevisChoix = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const projet = searchParams.get("projet");
 
-  const services = servicesParProjet[projet] || [];
+  /** @type {Service[]} */
+  const services = (projet && servicesParProjet[projet]) || [];
 
   if (!projet || services.length === 0) {
     return <div className="p-8">Projet introuvable ou aucun service disponible.</div>;
