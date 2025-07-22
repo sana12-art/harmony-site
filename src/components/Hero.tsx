@@ -1,5 +1,16 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // si tu utilises React Router
 
 export default function Hero() {
+   const [projet, setProjet] = useState('');
+   const navigate = useNavigate(); // pour la redirection
+    const handleClick = () => {
+    if (projet) {
+      navigate(`/devis?projet=${projet}`);
+    } else {
+      alert("Veuillez sélectionner un projet.");
+    }
+  };
 
   return (
     <div className="relative isolate pt-14 min-h-screen bg-white">
@@ -28,32 +39,41 @@ export default function Hero() {
           </p>
          
 
-<div className="relative w-full sm:w-96">
-  <select className="w-full px-6 py-3 pr-32 border border-gray-300 rounded-full text-gray-700 appearance-none">
-    <option value="">--Choisir votre projet--</option>
-    <option value="">Préstations de nettoyage</option>
-    <option value="renovation">Préstations maçonnerie</option>
-    <option value="construction">Préstations technicoat</option>
-    <option value="nettoyage">Préstations revetement sol et mur</option>
-    <option value="nettoyage">Préstations plomberie & clime</option>
+ <div className="relative w-full sm:w-96">
+      <select
+        className="w-full px-6 py-3 pr-32 border border-gray-300 rounded-full text-gray-700 appearance-none"
+        value={projet}
+        onChange={(e) => setProjet(e.target.value)}
+      >
+        <option value="">Sélectionnez un projet</option>
+        <option value="maçonnerie">Préstations maçonnerie</option>
+        <option value="technicoat">Préstations technicoat</option>
+        <option value="revêtement">Préstations revêtement sol et mur</option>
+        <option value="plomberie">Préstations plomberie & clim</option>
+        <option value="nettoyage">Préstations de nettoyage</option>
+      </select>
 
-  </select>
-  <button
-    className="absolute right-1 top-1 bottom-1 px-5 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition"
-  >
-    Chercher
-  </button>
-</div>
+      <button
+        className="absolute right-1 top-1 bottom-1 px-5 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition"
+          onClick={() => {
+            if (projet) navigate(`/devis/${projet}`);
+          }}
+      >
+        Demander un devis
+      </button>
+    </div>
+
+
 
 
         </div>
 
-        {/* Colonne droite : image illustrative */}
-<div className="mt-10 lg:mt-19 lg:w-1/2 flex justify-center">
-       <img
+      {/* Colonne droite : image illustrative */}
+      <div className="mt-12 lg:mt-0 lg:w-1/2 flex justify-center items-center">
+        <img
           src="/Image1.png"
           alt="Travaux Harmony Bâtiment"
-          className="max-w-full h-auto ml-12  rounded-xl shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 animate-fade-in"
+          className="w-full max-w-[500px] h-auto rounded-xl shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 animate-fade-in object-contain sm:mt-10"
         />
       </div>
       </div>
