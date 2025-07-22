@@ -8,9 +8,9 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-import DevisChoix from './components/DevisChoix';
-import Formulaire from './components/Formulaire';
-import DevisTypes from './components/DevisTypes';
+import DevisChoix from "./components/DevisChoix";
+import Formulaire from "./components/Formulaire";
+import DevisTypes from "./components/DevisTypes";
 import DevisPage from './components/DevisPage'; 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/devis" element={<DevisChoix />} />
         <Route path="/devis/:projet/:service" element={<Formulaire />} />
          <Route path="/devis/:projet" element={<DevisTypes />} />
-         <Route path="/devis" element={<DevisPage />} />
+         <Route path="/devis-page" element={<DevisPage />} />
         <Route
           path="/"
           element={<>
