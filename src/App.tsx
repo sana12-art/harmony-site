@@ -19,28 +19,41 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/devis" element={<DevisChoix />} />
-        <Route path="/devis/:projet/:service" element={<Formulaire />} />
-         <Route path="/devis/:projet" element={<DevisTypes />} />
-         <Route path="/devis-page" element={<DevisPage />} />
+        
+        <Route
+          path="/devis/:projet/:service"
+          element={<FormulaireWrapper />}
+        />
+
+        <Route path="/devis/:projet" element={<DevisTypes />} />
+        <Route path="/devis-page" element={<DevisPage />} />
+
         <Route
           path="/"
-          element={<>
-            <main>
-              <Hero />
-              <About />
-              <Services />
-              <Projects />
-              <Testimonials />
-              <Contact />
-            
-            </main>
-            <Footer />
-            <BackToTop />
-          </>} />
-
+          element={
+            <>
+              <main>
+                <Hero />
+                <About />
+                <Services />
+                <Projects />
+                <Testimonials />
+                <Contact />
+              </main>
+              <Footer />
+              <BackToTop />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
+}
+
+import { useParams } from 'react-router-dom';
+function FormulaireWrapper() {
+  const { projet, service } = useParams();
+  return <Formulaire projet={projet} service={service} />;
 }
 
 export default App;
