@@ -39,29 +39,30 @@ export default function Hero() {
           </p>
          
 
- <div className="relative w-full sm:w-96">
-      <select
-        className="w-full px-6 py-3 pr-32 border border-gray-300 rounded-full text-gray-700 appearance-none"
-        value={projet}
-        onChange={(e) => setProjet(e.target.value)}
-      >
-        <option value="">Sélectionnez un projet</option>
-        <option value="maçonnerie">Préstations maçonnerie</option>
-        <option value="technicoat">Préstations technicoat</option>
-        <option value="revêtement">Préstations revêtement sol et mur</option>
-        <option value="plomberie">Préstations plomberie & clim</option>
-        <option value="nettoyage">Préstations de nettoyage</option>
-      </select>
+    <div className="relative w-full max-w-xl">
+  <select
+    className="w-full px-6 py-3 pr-40 border border-gray-300 rounded-full text-gray-700 appearance-none"
+    value={projet}
+    onChange={(e) => setProjet(e.target.value)}
+  >
+    <option value="">- Sélectionnez un projet -</option>
+    <option value="maçonnerie">Prestations maçonnerie</option>
+    <option value="technicoat">Prestations technicoat</option>
+    <option value="revêtement">Prestations revêtement sol et mur</option>
+    <option value="plomberie">Prestations plomberie & clim</option>
+    <option value="nettoyage">Prestations de nettoyage</option>
+  </select>
 
-      <button
-        className="absolute right-1 top-1 bottom-1 px-5 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition"
-          onClick={() => {
-            if (projet) navigate(`/devis/${projet}`);
-          }}
-      >
-        Demander un devis
-      </button>
-    </div>
+  <button
+    className="absolute top-1 right-1 bottom-1 px-6 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
+    onClick={() => {
+      if (projet) navigate(`/devis/${projet}`);
+    }}
+  >
+    Demander un devis
+  </button>
+</div>
+
 
 
 

@@ -39,7 +39,7 @@ const Formulaire = ({ projet, service }) => {
           <>
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">
-                Nom :
+                Nom complet :
               </label>
               <input
                 type="text"
@@ -64,6 +64,19 @@ const Formulaire = ({ projet, service }) => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 font-semibold mb-2">
+                Ville / Région :
+              </label>
+              <input
+                type="text"
+                name="ville"
+                value={formData.ville}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
 
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">
@@ -78,6 +91,20 @@ const Formulaire = ({ projet, service }) => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 font-semibold mb-2">
+                Adresse précise du lieu des travaux :
+              </label>
+              <input
+                type="text"
+                name="adresse"
+                value={formData.adresse}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+
           </>
         )}
 
@@ -85,7 +112,7 @@ const Formulaire = ({ projet, service }) => {
           <>
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">
-                Détails :
+                Détails/Description du projet :
               </label>
               <textarea
                 name="details"
