@@ -4,13 +4,7 @@ import { useNavigate } from 'react-router-dom'; // si tu utilises React Router
 export default function Hero() {
    const [projet, setProjet] = useState('');
    const navigate = useNavigate(); // pour la redirection
-    const handleClick = () => {
-    if (projet) {
-      navigate(`/devis?projet=${projet}`);
-    } else {
-      alert("Veuillez sélectionner un projet.");
-    }
-  };
+
 
   return (
     <div className="relative isolate pt-14 min-h-screen bg-white">
