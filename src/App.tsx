@@ -12,6 +12,7 @@ import DevisChoix from "./components/DevisChoix";
 import Formulaire from "./components/Formulaire";
 import DevisTypes from "./components/DevisTypes";
 import DevisPage from './components/DevisPage'; 
+import MyBusiness from "./components/MyBusiness"; 
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/devis" element={<DevisChoix />} />
-        
+        <Route path="/mon-projet" element={<MyBusiness />} />
         <Route
           path="/devis/:projet/:service"
           element={<FormulaireWrapper />}
