@@ -5,7 +5,7 @@ export default function Hero() {
   const [projet, setProjet] = useState('');
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedProjet = e.target.value;
     setProjet(selectedProjet);
     if (selectedProjet) {
