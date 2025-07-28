@@ -34,27 +34,29 @@ const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
             Rénover en toute confiance, bâtir avec excellence.<br />Faites votre demande de devis gratuitement.
           </p>
 
-          {/* Sélecteur + bouton */}
-          <div className="relative w-full max-w-xl">
-            <select
-              className="w-full px-6 py-3 pr-40 border border-gray-300 rounded-full text-gray-700 appearance-none"
-              value={projet}
-              onChange={handleChange}
-            >
-              <option value="">- Sélectionnez un projet -</option>
-              <option value="technicoat">Prestations technicoat</option>
-              <option value="maçonnerie">Prestations maçonnerie</option>
-              <option value="nettoyage">Prestations de nettoyage</option>
-              <option value="revêtement">Prestations revêtement sol et mur</option>
-            </select>
+         <div className="relative w-full max-w-xl">
+  <select
+    className="w-full px-6 py-3 pr-44 border border-gray-300 rounded-full text-gray-700 text-sm sm:text-base truncate"
+    value={projet}
+    onChange={handleChange}
+  >
+    <option value="">- Sélectionnez un projet -</option>
+    <option value="technicoat">Prestations technicoat</option>
+    <option value="maçonnerie">Prestations maçonnerie</option>
+    <option value="nettoyage">Prestations de nettoyage</option>
+    <option value="revêtement">Prestations revêtement sol et mur</option>
+  </select>
 
-            <button
-              className="absolute top-1 right-1 bottom-1 px-6 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
-              onClick={handleClick}
-            >
-              Demander un devis
-            </button>
-          </div>
+<button
+  className="absolute top-1.5 right-1.5 px-4 py-2 text-sm rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
+  onClick={handleClick}
+>
+  <span className="hidden sm:inline">Demander un devis</span>
+  <span className="sm:hidden">Devis</span>
+</button>
+
+</div>
+
         </div>
 
         {/* Image */}
