@@ -83,17 +83,7 @@ const Formulaire = ({ projet, service }) => {
               />
             </div>
 
-            <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">Adresse précise du lieu des travaux :</label>
-              <input
-                type="text"
-                name="adresse"
-                value={formData.adresse}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-            </div>
+           
           </>
         )}
 

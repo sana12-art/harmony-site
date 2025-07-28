@@ -13,12 +13,14 @@ import Formulaire from "./components/Formulaire";
 import DevisTypes from "./components/DevisTypes";
 import DevisPage from './components/DevisPage'; 
 import MyBusiness from "./components/MyBusiness"; 
+import DevisCards from './components/DevisCards';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/devis" element={<DevisCards />} />
         <Route path="/devis" element={<DevisChoix />} />
         <Route path="/mon-projet" element={<MyBusiness />} />
         <Route
