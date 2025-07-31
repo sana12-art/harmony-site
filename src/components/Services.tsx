@@ -1,64 +1,60 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   BuildingOffice2Icon,
   WrenchScrewdriverIcon,
   HomeModernIcon,
   PresentationChartLineIcon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 
 const services = [
   {
     name: 'Maçonnerie',
-    description:
-      'Un projet de qualité nécessite un enchaînement rationnel et parfait de travaux. La finition reste une étape indispensable.',
+    value: 'maçonnerie',
+    description: 'Un projet de qualité nécessite un enchaînement rationnel et parfait de travaux...',
     icon: BuildingOffice2Icon,
     images: ['/maconnerie1.jpg', '/maconnerie2.jpg'],
-    details:
-      "Nos travaux de maçonnerie garantissent solidité et durabilité, avec un savoir-faire traditionnel et moderne adapté à chaque projet.",
-    link: 'http://localhost:5173/devis/ma%C3%A7onnerie',
+    details: 'Nos travaux de maçonnerie garantissent solidité et durabilité...',
   },
   {
     name: 'Technicoat',
-    description:
-      'Nous intervenons en tous types de services de technicoat, à savoir la finition, le ragréage et le ponçage.',
+    value: 'technicoat',
+    description: 'Nous intervenons en tous types de services de technicoat...',
     icon: WrenchScrewdriverIcon,
     images: ['/technicoat1.jpg', '/technicoat2.jpg'],
-    details:
-      "Le technicoat permet de préparer parfaitement les surfaces pour garantir un rendu impeccable, alliant performance et esthétique.",
-    link: 'http://localhost:5173/devis/technicoat',
+    details: 'Le technicoat permet de préparer parfaitement les surfaces...',
   },
   {
     name: 'Revêtement sol & mur',
-    description:
-      'Nous sommes spécialisés en revêtement de sol et mur : carrelage, parquet, papier-peint, peinture..',
+    value: 'revêtement',
+    description: 'Nous sommes spécialisés en revêtement de sol et mur...',
     icon: HomeModernIcon,
     images: ['/revetement1.jpg', '/revetement2.jpg'],
-    details:
-      "Nous posons tous types de revêtements avec précision, en valorisant l'esthétique et la durabilité des espaces intérieurs.",
-    link: 'http://localhost:5173/devis/rev%C3%AAtement',
+    details: 'Nous posons tous types de revêtements avec précision...',
   },
   {
     name: 'Nettoyage',
-    description:
-      'Nous nous occupons de tous types de nettoyage, que ce soit de fin de chantier ou de bureaux.',
+    value: 'nettoyage',
+    description: 'Nous nous occupons de tous types de nettoyage...',
     icon: PresentationChartLineIcon,
     images: ['/nettoyage.jpg', '/nettoyage1.jpg'],
-    details:
-      "Un nettoyage professionnel garantit un espace sain et agréable, essentiel pour la satisfaction finale du client.",
-    link: 'http://localhost:5173/devis/nettoyage',
+    details: 'Un nettoyage professionnel garantit un espace sain...',
   },
-]
+];
 
 export default function Services() {
-  const [showDetails, setShowDetails] = useState(
-    new Array(services.length).fill(false)
-  )
+  const [showDetails, setShowDetails] = useState(new Array(services.length).fill(false));
+  const navigate = useNavigate();
 
   const toggleDetails = (index: number) => {
-    const newShowDetails = [...showDetails]
-    newShowDetails[index] = !newShowDetails[index]
-    setShowDetails(newShowDetails)
-  }
+    const newShowDetails = [...showDetails];
+    newShowDetails[index] = !newShowDetails[index];
+    setShowDetails(newShowDetails);
+  };
+
+  const handleDemandeDevis = (value: string) => {
+    navigate(`/devis/${value}`);
+  };
 
   return (
     <div id="services" className="py-24 sm:py-32">
@@ -76,17 +72,14 @@ export default function Services() {
             {services.map((service, index) => (
               <div key={service.name} className="flex flex-col h-full">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                  <service.icon
-                    className="h-5 w-5 flex-none text-primary"
-                    aria-hidden="true"
-                  />
+                  <service.icon className="h-5 w-5 flex-none text-primary" aria-hidden="true" />
                   {service.name}
                 </dt>
                 <dd className="mt-4 flex flex-col justify-between flex-1 h-full text-base leading-7 text-gray-600">
                   <div className="flex-auto">
                     <p>{service.description}</p>
                     {showDetails[index] && (
-                      <div id={`service-details-${index}`} className="mt-4 space-y-4">
+                      <div className="mt-4 space-y-4">
                         <div className="flex flex-wrap gap-4">
                           {service.images.map((src, imgIndex) => (
                             <img
@@ -101,23 +94,22 @@ export default function Services() {
                       </div>
                     )}
                   </div>
-                  <div className="mt-6 flex flex-col gap-3">
-                    <button
-                      onClick={() => toggleDetails(index)}
-                      className="text-sm font-semibold leading-6 text-primary hover:underline"
-                      aria-expanded={showDetails[index]}
-                      aria-controls={`service-details-${index}`}
-                    >
-                      {showDetails[index] ? 'Masquer les détails' : 'En savoir plus'}{' '}
-                      <span aria-hidden="true">→</span>
-                    </button>
-                    <a
-                      href={service.link}
-                      className="inline-block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg text-sm"
-                    >
-                      Demander un devis
-                    </a>
-                  </div>
+
+                  {/* Bouton "Voir plus / moins" */}
+                  <button
+                    className="mt-4 text-sm text-sky-600 hover:underline"
+                    onClick={() => toggleDetails(index)}
+                  >
+                    {showDetails[index] ? 'Réduire' : 'Voir plus'}
+                  </button>
+
+                  {/* Bouton "Demander un devis" */}
+                  <button
+                    onClick={() => handleDemandeDevis(service.value)}
+                    className="mt-4 py-2 px-4 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-all"
+                  >
+                    Demander un devis
+                  </button>
                 </dd>
               </div>
             ))}
@@ -125,5 +117,5 @@ export default function Services() {
         </div>
       </div>
     </div>
-  )
+  );
 }
