@@ -15,6 +15,7 @@ const services = [
     images: ['/maconnerie1.jpg', '/maconnerie2.jpg'],
     details:
       "Nos travaux de maçonnerie garantissent solidité et durabilité, avec un savoir-faire traditionnel et moderne adapté à chaque projet.",
+    link: 'http://localhost:5173/devis/ma%C3%A7onnerie',
   },
   {
     name: 'Technicoat',
@@ -24,6 +25,7 @@ const services = [
     images: ['/technicoat1.jpg', '/technicoat2.jpg'],
     details:
       "Le technicoat permet de préparer parfaitement les surfaces pour garantir un rendu impeccable, alliant performance et esthétique.",
+    link: 'http://localhost:5173/devis/technicoat',
   },
   {
     name: 'Revêtement sol & mur',
@@ -33,6 +35,7 @@ const services = [
     images: ['/revetement1.jpg', '/revetement2.jpg'],
     details:
       "Nous posons tous types de revêtements avec précision, en valorisant l'esthétique et la durabilité des espaces intérieurs.",
+    link: 'http://localhost:5173/devis/rev%C3%AAtement',
   },
   {
     name: 'Nettoyage',
@@ -42,6 +45,7 @@ const services = [
     images: ['/nettoyage.jpg', '/nettoyage1.jpg'],
     details:
       "Un nettoyage professionnel garantit un espace sain et agréable, essentiel pour la satisfaction finale du client.",
+    link: 'http://localhost:5173/devis/nettoyage',
   },
 ]
 
@@ -64,8 +68,7 @@ export default function Services() {
             Nos Services
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Nous proposons une grande variété de services professionnels pour
-            répondre à vos besoins.
+            Nous proposons une grande variété de services professionnels pour répondre à vos besoins.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -83,10 +86,7 @@ export default function Services() {
                   <div className="flex-auto">
                     <p>{service.description}</p>
                     {showDetails[index] && (
-                      <div
-                        id={`service-details-${index}`}
-                        className="mt-4 space-y-4"
-                      >
+                      <div id={`service-details-${index}`} className="mt-4 space-y-4">
                         <div className="flex flex-wrap gap-4">
                           {service.images.map((src, imgIndex) => (
                             <img
@@ -101,7 +101,7 @@ export default function Services() {
                       </div>
                     )}
                   </div>
-                  <p className="mt-6">
+                  <div className="mt-6 flex flex-col gap-3">
                     <button
                       onClick={() => toggleDetails(index)}
                       className="text-sm font-semibold leading-6 text-primary hover:underline"
@@ -111,7 +111,13 @@ export default function Services() {
                       {showDetails[index] ? 'Masquer les détails' : 'En savoir plus'}{' '}
                       <span aria-hidden="true">→</span>
                     </button>
-                  </p>
+                    <a
+                      href={service.link}
+                      className="inline-block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg text-sm"
+                    >
+                      Demander un devis
+                    </a>
+                  </div>
                 </dd>
               </div>
             ))}

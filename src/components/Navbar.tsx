@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
   { name: 'À propos', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Réalisations', href: '#projects' },
+  { name: 'Nos projets', href: '#projects' },
   { name: 'Contact', href: '#contact' },
-  { name: 'Mon projet professionnel', href: '/mon-projet' }, 
 ];
 
 export default function Navbar() {
@@ -57,12 +56,13 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="tel:+33 6 15 80 82 19"
-            className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-300"
+            href="tel:+33615808219"
+            className="text-sky-600 hover:text-sky-800"
+            title="Appeler Harmony Bâtiment"
           >
-            Demande téléphonique
+            <PhoneIcon className="h-6 w-6" />
           </a>
         </div>
       </nav>
@@ -110,12 +110,13 @@ export default function Navbar() {
                   )
                 )}
               </div>
-              <div className="py-6 space-y-3">
+              <div className="py-6">
                 <a
-                  href="tel:+33 6 15 80 82 19"
-                  className="w-full inline-block text-center bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
+                  href="tel:+33615808219"
+                  className="inline-flex items-center text-sky-600 hover:text-sky-800"
+                  title="Appeler Harmony Bâtiment"
                 >
-                  Demande téléphonique
+                  <PhoneIcon className="h-6 w-6" />
                 </a>
               </div>
             </div>

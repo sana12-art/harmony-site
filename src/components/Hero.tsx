@@ -5,7 +5,7 @@ export default function Hero() {
   const [projet, setProjet] = useState('');
   const navigate = useNavigate();
 
-const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedProjet = e.target.value;
     setProjet(selectedProjet);
     if (selectedProjet) {
@@ -28,14 +28,14 @@ const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         {/* Texte */}
         <div className="lg:w-1/2 text-left">
           <h1 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Redécouvrez l’art de la construction avec <span className="text-sky-600">Harmony Bâtiment</span>
+            Redécouvrez l'art de la construction avec <span className="text-sky-600">Harmony Bâtiment</span>
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             Rénover en toute confiance, bâtir avec excellence.<br />Faites votre demande de devis gratuitement.
           </p>
 
-          {/* Sélecteur + bouton */}
-          <div className="relative w-full max-w-xl">
+          {/* Sélecteur + bouton - Version Desktop */}
+          <div className="hidden sm:block relative w-full max-w-xl">
             <select
               className="w-full px-5 py-3 pr-40 border border-gray-300 rounded-full text-gray-700 appearance-none"
               value={projet}
@@ -49,7 +49,29 @@ const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
             </select>
 
             <button
-              className="absolute top-1 right-0.5 bottom-1 px-4 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
+              className="absolute top-0 right-0 h-full px-4 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
+              onClick={handleClick}
+            >
+              Demander un devis
+            </button>
+          </div>
+
+          {/* Sélecteur + bouton - Version Mobile */}
+          <div className="sm:hidden flex flex-col gap-3 w-full">
+            <select
+              className="w-full px-5 py-3 border border-gray-300 rounded-full text-gray-700 appearance-none"
+              value={projet}
+              onChange={handleChange}
+            >
+              <option value="">- Sélectionnez un projet -</option>
+              <option value="technicoat">Prestations technicoat</option>
+              <option value="maçonnerie">Prestations maçonnerie</option>
+              <option value="nettoyage">Prestations de nettoyage</option>
+              <option value="revêtement">Prestations revêtement sol et mur</option>
+            </select>
+
+            <button
+              className="w-full py-3 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
               onClick={handleClick}
             >
               Demander un devis

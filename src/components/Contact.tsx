@@ -1,4 +1,4 @@
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, PhoneIcon} from '@heroicons/react/24/outline'
 
 export default function Contact() {
   return (
@@ -37,19 +37,7 @@ N’hésitez pas à nous contacter par l’un des moyens suivants :
                   </a>
                 </dd>
               </div>
-              <div className="flex gap-x-4">
-                <dt>
-                  <MapPinIcon className="h-7 w-6 text-primary" aria-hidden="true" />
-                </dt>
-                <dd>
-                  <p className="text-base leading-7 text-gray-600">
-                    62 RUE ANTONIN GEORGES BELIN, <br/>
-                    95100 ARGENTEUIL
-
-                   
-                  </p>
-                </dd>
-              </div>
+           
             </dl>
           </div>
           <form className="flex flex-col gap-y-6">

@@ -195,7 +195,7 @@ export default function Projects() {
     <div id="projects" className="bg-white py-24 sm:py-32">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos projets</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos queques projets</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Découvrez notre portfolio de réalisations, illustrant notre savoir-faire dans différents domaines de la construction et de la rénovation.
           </p>

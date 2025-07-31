@@ -4,6 +4,8 @@ const Formulaire = ({ projet, service }) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     nom: "",
+    prenom: "",
+    entreprise: "",
     email: "",
     telephone: "",
     ville: "",
@@ -36,7 +38,7 @@ const Formulaire = ({ projet, service }) => {
         {step === 1 && (
           <>
             <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">Nom complet :</label>
+              <label className="block text-gray-700 font-semibold mb-2">Nom</label>
               <input
                 type="text"
                 name="nom"
@@ -46,7 +48,28 @@ const Formulaire = ({ projet, service }) => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
-
+            <div className="mb-6">
+              <label className="block text-gray-700 font-semibold mb-2">Prénom</label>
+              <input
+                type="text"
+                name="prenom"
+                value={formData.nom}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 font-semibold mb-2">Nom de l'entreprise</label>
+              <input
+                type="text"
+                name="entreprise"
+                value={formData.entreprise}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">Email :</label>
               <input
@@ -58,19 +81,7 @@ const Formulaire = ({ projet, service }) => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
-
-            <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">Ville / Région :</label>
-              <input
-                type="text"
-                name="ville"
-                value={formData.ville}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-            </div>
-
+            
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">Téléphone :</label>
               <input
@@ -82,14 +93,18 @@ const Formulaire = ({ projet, service }) => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
-
-           
-          </>
-        )}
-
-        {step === 2 && (
-          <>
             <div className="mb-6">
+              <label className="block text-gray-700 font-semibold mb-2">Ville / Région :</label>
+              <input
+                type="text"
+                name="ville"
+                value={formData.ville}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">Détails/Description du projet :</label>
               <textarea
                 name="details"
@@ -101,19 +116,11 @@ const Formulaire = ({ projet, service }) => {
               />
             </div>
 
-            <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">Date souhaitée :</label>
-              <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-            </div>
+           
           </>
         )}
+
+       
 
         {step === 3 && (
           <div className="mb-6 space-y-2 text-gray-800">
@@ -129,32 +136,15 @@ const Formulaire = ({ projet, service }) => {
         )}
 
         <div className="flex justify-between mt-8">
-          {step > 1 && (
-            <button
-              type="button"
-              onClick={handlePrev}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-6 rounded-full transition"
-            >
-              Précédent
-            </button>
-          )}
-
-          {step < 3 ? (
-            <button
-              type="button"
-              onClick={handleNext}
-              className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-6 rounded-full transition"
-            >
-              Suivant
-            </button>
-          ) : (
+          
+          
             <button
               type="submit"
               className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-6 rounded-full transition"
             >
               Envoyer
             </button>
-          )}
+        
         </div>
       </form>
     </div>
