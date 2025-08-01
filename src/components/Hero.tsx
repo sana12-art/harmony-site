@@ -57,26 +57,30 @@ export default function Hero() {
           </div>
 
           {/* Sélecteur + bouton - Version Mobile */}
-          <div className="sm:hidden flex flex-col gap-3 w-full">
-            <select
-              className="w-full px-5 py-3 border border-gray-300 rounded-full text-gray-700 appearance-none"
-              value={projet}
-              onChange={handleChange}
-            >
-              <option value="">- Sélectionnez un projet -</option>
-              <option value="technicoat">Prestations technicoat</option>
-              <option value="maçonnerie">Prestations maçonnerie</option>
-              <option value="nettoyage">Prestations de nettoyage</option>
-              <option value="revêtement">Prestations revêtement sol et mur</option>
-            </select>
+            <div className="sm:hidden w-full px-4">
+  <div className="relative w-full">
+    <select
+      className="w-full px-1 py-3  border border-gray-300 rounded-full text-gray-700 appearance-none text-sm"
+      value={projet}
+      onChange={handleChange}
+    >
+      <option value="">- Sélectionnez un projet -</option>
+      <option value="technicoat">Prestations technicoat</option>
+      <option value="maçonnerie">Prestations maçonnerie</option>
+      <option value="nettoyage">Prestations de nettoyage</option>
+      <option value="revêtement">Prestations revêtement sol et mur</option>
+    </select>
 
-            <button
-              className="w-full py-3 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all"
-              onClick={handleClick}
-            >
-              Demander un devis
-            </button>
-          </div>
+    <button
+      className="absolute top-1/2 right-0 transform -translate-y-1/2 px-3 py-3 bg-sky-500 text-white text-xs rounded-full hover:bg-sky-600 transition-all whitespace-nowrap"
+      onClick={handleClick}
+    >
+      Demander un devis
+    </button>
+  </div>
+</div>
+
+
         </div>
 
         {/* Image */}
