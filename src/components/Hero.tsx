@@ -75,7 +75,7 @@ export default function Hero() {
       className="px-5 bg-sky-500 text-white text-sm font-medium hover:bg-sky-600 transition-all h-full"
       onClick={handleClick}
     >
-      Demanderun devis 
+      Demander un devis 
     </button>
   </div>
 </div>
