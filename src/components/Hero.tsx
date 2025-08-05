@@ -56,11 +56,11 @@ export default function Hero() {
           </div>
 
           {/* Mobile version */}
-          {/* Mobile version */}
+              {/* Mobile version */}
 <div className="sm:hidden w-full mt-4">
-  <div className="flex w-full border border-gray-300 rounded-full overflow-hidden bg-white">
+  <div className="flex w-full border border-gray-300 rounded-full overflow-hidden bg-white h-14">
     <select
-      className="flex-1 px-4 py-3 border-none outline-none text-gray-700 text-sm bg-white"
+      className="flex-1 px-4 text-sm border-none outline-none text-gray-700 bg-white h-full"
       value={projet}
       onChange={handleChange}
     >
@@ -72,13 +72,14 @@ export default function Hero() {
     </select>
 
     <button
-      className="px-4 bg-sky-500 text-white text-sm font-medium hover:bg-sky-600 transition-all"
+      className="px-5 bg-sky-500 text-white text-sm font-medium hover:bg-sky-600 transition-all h-full"
       onClick={handleClick}
     >
-      Demander un devis
+      Demanderun devis 
     </button>
   </div>
 </div>
+
 
         </div>
 
