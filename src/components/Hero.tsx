@@ -32,7 +32,7 @@ export default function Hero() {
             <span className="text-sky-600">Harmony Bâtiment</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 mb-8">
-            Rénover en toute confiance, bâtir avec excellence.<br />
+            Rénover en toute confiance, bâtir avec excellence<br />
             Faites votre demande de devis gratuitement.
           </p>
 
