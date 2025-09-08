@@ -58,32 +58,33 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Mobile version */}
-          <div className="sm:hidden w-full mt-6">
-            <div className="flex w-full items-center border border-gray-300 rounded-full bg-white shadow-sm">
-              <select
-                className="flex-1 px-3 text-sm text-gray-700 bg-white h-12 border-none outline-none appearance-none"
-                value={projet}
-                onChange={handleChange}
-                autoCorrect="off"
-                autoCapitalize="none"
-                spellCheck={false}
-              >
-                <option value="">- Sélectionnez un projet -</option>
-                <option value="technicoat">Prestations Technicoat</option>
-                <option value="maçonnerie">Prestations Maçonnerie</option>
-                <option value="nettoyage">Prestations Nettoyage</option>
-                <option value="revêtement">Prestations Revêtement Sol et Mur</option>
-              </select>
+     {/* Mobile version */}
+<div className="sm:hidden w-full mt-6">
+  <div className="flex w-full items-center border border-gray-300 rounded-full bg-white shadow-sm">
+    <select
+      className="flex-1 px-3 text-sm text-gray-700 bg-white h-12 outline-none appearance-none rounded-l-full border border-gray-300"
+      value={projet}
+      onChange={handleChange}
+      autoCorrect="off"
+      autoCapitalize="none"
+      spellCheck={false}
+    >
+      <option value="">- Sélectionnez un projet -</option>
+      <option value="technicoat">Prestations Technicoat</option>
+      <option value="maçonnerie">Prestations Maçonnerie</option>
+      <option value="nettoyage">Prestations Nettoyage</option>
+      <option value="revêtement">Prestations Revêtement Sol et Mur</option>
+    </select>
 
-              <button
-                className="h-12 px-5 bg-sky-500 text-white text-sm font-medium hover:bg-sky-600 transition-all rounded-r-full whitespace-nowrap"
-                onClick={handleClick}
-              >
-                Devis
-              </button>
-            </div>
-          </div>
+    <button
+      className="h-12 px-5 bg-sky-500 text-white text-sm font-medium hover:bg-sky-600 transition-all rounded-r-full whitespace-nowrap"
+      onClick={handleClick}
+    >
+      Devis
+    </button>
+  </div>
+</div>
+
         </div>
 
         {/* Image */}
