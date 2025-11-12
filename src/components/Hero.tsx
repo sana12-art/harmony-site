@@ -14,7 +14,7 @@ export default function Hero() {
   };
 
   const handleClick = () => {
-    if (projet) {
+    if (projet) { 
       navigate(`/devis/${projet}`);
     } else {
       navigate("/devis");

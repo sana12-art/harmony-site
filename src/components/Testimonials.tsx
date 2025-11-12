@@ -1,10 +1,10 @@
 const clientLogos = [
+  { logo: "/Cobat.png", name: "Cobat construction" },
+  { logo: "/vinci.webp", name: "FWPT VINCI" },
   { logo: "/nexity.png", name: "Nexity" },
   { logo: "/urbaine.png", name: "Urbaine" },
   { logo: "/bjf.png", name: "BJF Construction" },
   { logo: "/lte.jpg", name: "LTE" },
-  { logo: "/vinci.webp", name: "FWPT VINCI" },
-  { logo: "/Cobat.png", name: "Cobat construction" },
 ];
 
 export default function Testimonials() {

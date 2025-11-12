@@ -1,23 +1,50 @@
+/* === Structure principale === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory; /* défilement fluide section par section */
+  overflow-y: scroll;
+}
+
+/* Conteneur racine React */
 #root {
-  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh; /* occupe toute la hauteur de l’écran */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
+/* === Gestion des sections === */
+section {
+  min-height: 100vh; /* chaque section prend toute la hauteur de l’écran */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* === Logo === */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* === Animation du logo === */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,6 +60,7 @@
   }
 }
 
+/* === Cartes, textes et formulaires === */
 .card {
   padding: 2em;
 }
@@ -40,6 +68,19 @@
 .read-the-docs {
   color: #888;
 }
+
+/* === Champs d’entrée === */
 .input-style {
-  @apply w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-style:focus {
+  border-color: #2563eb; /* bleu */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
 }

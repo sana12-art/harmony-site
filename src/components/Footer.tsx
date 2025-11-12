@@ -53,7 +53,7 @@ const navigation = {
 }
 
 const contactInfo = [
-  { text: '+33 6 15 80 82 19', icon: PhoneIcon, href: 'tel:+33 6 15 80 82 19' },
+  { text: '+33 7 80 89 83 67', icon: PhoneIcon, href: 'tel:+33 6 15 80 82 19' },
   { text: 'contact@harmonybatiment.com', icon: EnvelopeIcon, href: 'mailto:contact@harmonybatiment.com' },
   { text: '62 RUE ANTONIN GEORGES BELIN, 95100 ARGENTEUIL ', icon: MapPinIcon, href: 'https://maps.google.com' },
 ]

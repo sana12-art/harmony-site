@@ -24,7 +24,7 @@ N’hésitez pas à nous contacter par l’un des moyens suivants :
                   <PhoneIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <p className="text-base leading-7 text-gray-600">01 82 28 11 66</p>
+                  <p className="text-base leading-7 text-gray-600">+33 7 80 89 83 67</p>
                 </dd>
               </div>
               <div className="flex gap-x-4">

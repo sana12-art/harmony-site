@@ -58,7 +58,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="tel:+33615808219"
+            href="tel:+33 7 80 89 83 67"
             className="text-sky-600 hover:text-sky-800"
             title="Appeler Harmony Bâtiment"
           >
@@ -112,7 +112,7 @@ export default function Navbar() {
               </div>
               <div className="py-6">
                 <a
-                  href="tel:+33615808219"
+                  href="tel:+33 7 80 89 83 67"
                   className="inline-flex items-center text-sky-600 hover:text-sky-800"
                   title="Appeler Harmony Bâtiment"
                 >
