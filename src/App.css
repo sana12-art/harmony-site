@@ -18,7 +18,7 @@ html, body {
 
 /* === Gestion des sections === */
 section {
-  min-height: 100vh; /* chaque section prend toute la hauteur de l’écran */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
