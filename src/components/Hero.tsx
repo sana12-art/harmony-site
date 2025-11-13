@@ -14,7 +14,7 @@ export default function Hero() {
   };
 
   const handleClick = () => {
-    if (projet) { 
+    if (projet) {
       navigate(`/devis/${projet}`);
     } else {
       navigate("/devis");
@@ -22,12 +22,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-white pt-24 lg:pt-28">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16 py-10 lg:py-16 overflow-hidden">
+    <section className="relative bg-white min-h-screen flex items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
         
         {/* Texte */}
-        <div className="w-full lg:w-1/2 text-left">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-snug break-words">
+        <div className="w-full lg:w-1/2 text-left flex flex-col justify-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-snug">
             Redécouvrez l'art de la construction avec{" "}
             <span className="text-sky-600">Harmony Bâtiment</span>
           </h1>
@@ -37,27 +37,26 @@ export default function Hero() {
           </p>
 
           {/* Desktop version */}
-<div className="hidden sm:flex relative w-full max-w-lg flex-shrink">
-  <select
-    className="w-full px-5 py-3 pr-40 border border-gray-300 rounded-full text-gray-700 appearance-none focus:ring-2 focus:ring-sky-400 focus:outline-none"
-    value={projet}
-    onChange={handleChange}
-  >
-    <option value="">- Sélectionnez un projet -</option>
-    <option value="technicoat">Prestations Technicoat</option>
-    <option value="maçonnerie">Prestations Maçonnerie</option>
-    <option value="nettoyage">Prestations Nettoyage</option>
-    <option value="revêtement">Prestations Revêtement Sol et Mur</option>
-  </select>
+          <div className="hidden sm:flex relative w-full max-w-lg flex-shrink">
+            <select
+              className="w-full px-5 py-3 pr-40 border border-gray-300 rounded-full text-gray-700 appearance-none focus:ring-2 focus:ring-sky-400 focus:outline-none"
+              value={projet}
+              onChange={handleChange}
+            >
+              <option value="">- Sélectionnez un projet -</option>
+              <option value="technicoat">Prestations Technicoat</option>
+              <option value="maçonnerie">Prestations Maçonnerie</option>
+              <option value="nettoyage">Prestations Nettoyage</option>
+              <option value="revêtement">Prestations Revêtement Sol et Mur</option>
+            </select>
 
-  <button
-    className="absolute top-0 right-0 h-full px-5 rounded-full bg-sky-500 text-white text-sm sm:text-base font-medium hover:bg-sky-600 transition-all whitespace-nowrap"
-    onClick={handleClick}
-  >
-    Demander un devis
-  </button>
-</div>
-
+            <button
+              className="absolute top-0 right-0 h-full px-5 rounded-full bg-sky-500 text-white text-sm sm:text-base font-medium hover:bg-sky-600 transition-all whitespace-nowrap"
+              onClick={handleClick}
+            >
+              Demander un devis
+            </button>
+          </div>
 
           {/* Mobile version */}
           <div className="sm:hidden w-full mt-6">
