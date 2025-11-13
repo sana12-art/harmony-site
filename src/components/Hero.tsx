@@ -22,16 +22,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-white min-h-screen flex items-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
+<section className="relative bg-white min-h-screen flex items-center pt-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20">
         
         {/* Texte */}
         <div className="w-full lg:w-1/2 text-left flex flex-col justify-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-snug">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-snug">
             Redécouvrez l'art de la construction avec{" "}
             <span className="text-sky-600">Harmony Bâtiment</span>
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 mb-8">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 max-w-xl lg:max-w-2xl">
             Rénover en toute confiance, bâtir avec excellence. <br />
             Faites votre demande de devis gratuitement.
           </p>
@@ -88,7 +88,7 @@ export default function Hero() {
           <img
             src="/Image1.png"
             alt="Travaux Harmony Bâtiment"
-            className="w-full max-w-[400px] lg:max-w-[480px] h-auto rounded-xl shadow-lg object-contain"
+            className="w-full max-w-[500px] lg:max-w-[600px] h-auto rounded-xl shadow-lg object-contain"
           />
         </div>
       </div>
